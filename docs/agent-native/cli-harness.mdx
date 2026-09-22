@@ -64,7 +64,7 @@ npx @insforge/cli memory recall "database conventions"
 ```
 
 <Note>
-  **Model Gateway prerequisite**: `memory remember` and `memory recall` require an AI provider to generate vector embeddings for `pgvector` storage and semantic search, as well as to reconcile duplicate memories. On cloud projects, this is pre-configured. On self-hosted instances, configure the [Model Gateway](/core-concepts/ai/overview) in the dashboard or set `OPENROUTER_API_KEY` in your `.env` before storing or recalling memories. `memory list` does not require an AI provider because it queries stored memory metadata directly from PostgreSQL.
+  **Model Gateway prerequisite**: `memory remember` requires an AI provider to generate embeddings for `pgvector` storage and to reconcile duplicate memories. `memory recall` requires an AI provider to generate a query embedding for semantic search. On cloud projects, this is pre-configured. On self-hosted instances, configure the [Model Gateway](/core-concepts/ai/overview) in the dashboard or set `OPENROUTER_API_KEY` in your `.env` before storing or recalling memories. `memory list` does not require an AI provider because it queries stored memory metadata directly from PostgreSQL.
 </Note>
 
 ## Upgrading and deleting a project
